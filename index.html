@@ -7,41 +7,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dogo Generator</title>
   <link rel="stylesheet" href="./styles/styles.css" />
-  <!-- <link rel="icon" type="image/x-icon" href="./images/logo-web-logo.png" /> -->
+
 </head>
 
 <body>
   <div class="container">
     <h1>Say hello to doggie !</h1>
+
+
     <!-- Dog image -->
-      <div class="random-dog">
-        <img class="dogo-img" src="" alt="">
-      </div>
-      <!-- Dog Age -->
-      <div class="age">
-        <h2>Age: </h2>
-        <textarea class="fill-text" name="age-number" rows="1" cols="5"></textarea>
-      </div>
-      <!-- Dog gender -->
-      <div class="gender">
-        <h2>Gender: </h2>
-        <textarea class="fill-text" name="gender-type" rows="1" cols="10"></textarea>
-      </div>
-      <!-- Dog Nationality -->
+    <div class="random-dog">
+      <img class="dogo-img" src="" alt="">
+    </div>
 
-    </div class="nationality">
-        <h2>Nationality</h2>
-        <textarea class="fill-text" name="nationality-field" rows="1" cols="10"></textarea>
+    <!-- Name to search -->
+    <div class="dog_name">
+      <h2>Enter a name: </h2>
+      <textarea class="dog_name_text" rows="1" cols="5"></textarea>
     </div>
 
 
-    <!-- Generate prediction button -->
-    <div class="generate-button">
-      <button class="generate_btn" type="button" name="Generate">Generate</button>
+    <!-- Dog Age -->
+    <div class="age">
+      <h2>Age: </h2>
+      <textarea class="age_number" rows="1" cols="5"></textarea>
     </div>
 
+    <!-- Dog gender -->
+    <div class="gender">
+      <h2>Gender: </h2>
+      <textarea class="gender_type"  rows="1" cols="10"></textarea>
+    </div>
+
+
+    <!-- Dog Nationality -->
+  </div class="nationality">
+  <h2>Nationality</h2>
+  <textarea class="nationality_id"  rows="1" cols="10"></textarea>
+  <textarea class="nationality_id2" name="name" rows="1" cols="10"></textarea>
   </div>
 
+
+  <!-- Generate prediction button -->
+  <div class="generate-button">
+    <button class="generate_btn" type="button" >Generate</button>
+  </div>
+
+  </div>
+<!-- Calling the javascript -->
   <script src="scripts/script.js" type="text/javascript"></script>
 </body>
 
