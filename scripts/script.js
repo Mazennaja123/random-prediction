@@ -1,5 +1,6 @@
 document.getElementsByClassName("dogo-img");
 generate_query=document.querySelector(".generate_btn");
+get_name=document.querySelector(".dog_name_text");
 get_age=document.getElementsByClassName("age_number");
 get_gender=document.getElementsByClassName("gender_type");
 get_nationality=document.getElementsByClassName("nationality_id");
@@ -26,10 +27,11 @@ function generating_prediction()
 {
 
 
-  fetch("https://api.genderize.io/?name=rio")
+
+  fetch("https://api.genderize.io/?name=mazen"+get_name.value)
   .then(response=> response.json())
   .then((data) => {
-  get_gender[0].innerHTML=data.gender
+  get_gender[0].value=data.gender
 
   })
 
@@ -37,18 +39,20 @@ function generating_prediction()
 
 
 
-  fetch("https://api.agify.io/?name=nour")
+  fetch("https://api.agify.io/?name="+get_name.value )
   .then(response=> response.json())
   .then((data) => {
-get_age[0].innerHTML=data.age
+get_age[0].value=data.age
 
 })
 
-fetch("https://api.nationalize.io/?name=mohamad")
+fetch("https://api.nationalize.io/?name="+get_name.value)
 .then(response=> response.json())
 .then((data) => {
-get_nationality[0].innerHTML=data.country[0].country_id
-get_nationality2[0].innerHTML=data.country[1].country_id
+  console.log("https://api.nationalize.io/?name="+get_name.value)
+get_nationality[0].value=data.country[0].country_id
+get_nationality2[0].value=data.country[1].country_id
+
 })
 
 
