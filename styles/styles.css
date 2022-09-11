@@ -30,15 +30,12 @@ img{
 }
 
 /* resizing generate button */
-generate-btn{
-  font-size: 48px;
-   margin-top: 500px;
-  margin-bottom: 500px;
-
+.generate_btn{
+  font-size: 20px;
 }
 
 
-/* Sizing h2 */
+/* changing h2 font */
 h2{
   font-size: 18px;
 }
