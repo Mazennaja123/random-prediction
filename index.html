@@ -6,14 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dogo Generator</title>
-  <link rel="stylesheet" href="./styles/styles.css" />
+
+  <link href="./styles/styles.css" type="text/css" rel="stylesheet" />
 
 </head>
 
 <body>
-  <div class="container">
-    <h1>Say hello to doggie !</h1>
-
+  <div class="container flex">
+    <h1>They call me dogo! (I am cute)</h1>
 
     <!-- Dog image -->
     <div class="random-dog">
@@ -21,40 +21,40 @@
     </div>
 
     <!-- Name to search -->
-    <div class="dog_name">
+    <div class="dog_name ">
       <h2>Enter a name: </h2>
-      <input class="dog_name_text" rows="1" cols="5"></input>
+      <input class="dog_name_text"></input>
     </div>
 
 
     <!-- Dog Age -->
     <div class="age">
       <h2>Age: </h2>
-      <input class="age_number" rows="1" cols="5"></input>
+      <input class="age_number" ></input>
     </div>
 
     <!-- Dog gender -->
     <div class="gender">
       <h2>Gender: </h2>
-      <input class="gender_type"  rows="1" cols="10"></input>
+      <input class="gender_type" ></input>
     </div>
 
 
     <!-- Dog Nationality -->
-  </div class="nationality">
-  <h2>Nationality</h2>
-  <input class="nationality_id"  rows="1" cols="10"></input>
-  <input class="nationality_id2" name="name" rows="1" cols="10"></input>
-  </div>
+    <div class="nationality">
+      <h2>Nationality: </h2>
+      <input class="nationality_id"></input>
+      <input class="nationality_id2" ></input>
+    </div>
 
 
-  <!-- Generate prediction button -->
-  <div class="generate-button">
-    <button class="generate_btn" type="button" >Generate</button>
-  </div>
+    <!-- Generate prediction button -->
+    <div class="generate-button">
+      <button class="generate_btn" type="button">Generate</button>
+    </div>
 
   </div>
-<!-- Calling the javascript -->
+  <!-- Calling the javascript -->
   <script src="scripts/script.js" type="text/javascript"></script>
 </body>
 

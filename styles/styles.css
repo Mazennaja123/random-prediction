@@ -1,15 +1,53 @@
-.img{
+/* styling the container */
+.container{
+text-align: center;
+background-color: pink;
+background-image: url("https://img.freepik.com/free-vector/hand-drawn-minimal-background_23-2148999828.jpg?w=2000");
+font-size: 14px
+}
+
+/* Flexing all components in column direction */
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 0 0;
+}
+
+/* flexing div components by row */
+div{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+
+}
+
+/* resizing image */
+img{
 
   width: 400px;
   height: 400px;
 }
-.generate-btn{
-  /* margin-top: 100px;
-  margin-bottom: 100px; */
-font-size: 24px;
+
+/* resizing generate button */
+generate-btn{
+  font-size: 48px;
+   margin-top: 500px;
+  margin-bottom: 500px;
+
 }
 
-.fill-text{
-font-size: 24px
+
+
+h2{
+  font-size: 18px;
+}
+
+/* styling inputs */
+input{
+  width: 80px;
+  height: 20px;
+  margin: 15px 0px 0 10px;
+  padding-left: 10px
 
 }

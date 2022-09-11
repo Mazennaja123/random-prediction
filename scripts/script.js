@@ -6,15 +6,13 @@ get_gender=document.getElementsByClassName("gender_type");
 get_nationality=document.getElementsByClassName("nationality_id");
 get_nationality2=document.getElementsByClassName("nationality_id2");
 get_dog_image_query=document.querySelector(".dogo-img");
+
+
+
+//Generating prediction upon click
 generate_query.addEventListener("click",generating_prediction);
 
-
-
-
-
-
-
-
+// Fetch random image then save it in get_dog_image_query
     fetch("https://dog.ceo/api/breeds/image/random")
     .then(response=> response.json())
     .then((data) => {
@@ -22,12 +20,11 @@ generate_query.addEventListener("click",generating_prediction);
     })
 
 
-
+// Generate prediction function
 function generating_prediction()
 {
 
-
-
+// Gender fetching
   fetch("https://api.genderize.io/?name=mazen"+get_name.value)
   .then(response=> response.json())
   .then((data) => {
@@ -35,17 +32,14 @@ function generating_prediction()
 
   })
 
-
-
-
-
+// Age fetching
   fetch("https://api.agify.io/?name="+get_name.value )
   .then(response=> response.json())
   .then((data) => {
 get_age[0].value=data.age
-
 })
 
+// Nationality fetching
 fetch("https://api.nationalize.io/?name="+get_name.value)
 .then(response=> response.json())
 .then((data) => {
