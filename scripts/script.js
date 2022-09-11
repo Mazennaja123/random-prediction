@@ -8,9 +8,24 @@ get_nationality2=document.getElementsByClassName("nationality_id2");
 get_dog_image_query=document.querySelector(".dogo-img");
 
 
+get_name.addEventListener('input', updateValue);
 
-//Generating prediction upon click
-generate_query.addEventListener("click",generating_prediction);
+if(get_name.textContent.length==0){
+//if(get_name.textContent.length==0){
+  generate_query.disabled=true;
+  generate_query.removeEventListener("click",generating_prediction);
+  console.log(get_name.textContent.length)
+  get_name.addEventListener('input', updateValue);
+}
+
+else {
+
+  //Generating prediction upon click
+  generate_query.disabled=false;
+  generate_query.addEventListener("click",generating_prediction);
+}
+
+
 
 // Fetch random image then save it in get_dog_image_query
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -18,6 +33,31 @@ generate_query.addEventListener("click",generating_prediction);
     .then((data) => {
       get_dog_image_query.src=data.message;
     })
+
+
+//Check if data being written in name
+function updateValue(e) {
+  get_name.textContent = e.target.value;
+  //console.log(get_name.textContent.length)
+
+ if(get_name.textContent.length==0){
+ //if(get_name.textContent.length==0){
+   generate_query.disabled=true;
+   generate_query.removeEventListener("click",generating_prediction);
+
+//return get_name.textContent.length
+}
+else {
+
+  //Generating prediction upon click
+  generate_query.disabled=false;
+  generate_query.addEventListener("click",generating_prediction);
+}
+return get_name.textContent.length
+}
+
+
+
 
 
 // Generate prediction function
@@ -46,10 +86,6 @@ fetch("https://api.nationalize.io/?name="+get_name.value)
   console.log("https://api.nationalize.io/?name="+get_name.value)
 get_nationality[0].value=data.country[0].country_id
 get_nationality2[0].value=data.country[1].country_id
-
 })
-
-
-
 
 }
